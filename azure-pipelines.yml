@@ -29,7 +29,7 @@ steps:
   displayName: 'Install dependencies'
 
 - script: |
-    pip wheel --no-deps -r packages.txt
+    python launcher.py packages.txt
   displayName: 'Build packages'
   
 - task: TwineAuthenticate@1
