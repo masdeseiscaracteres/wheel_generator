@@ -13,5 +13,4 @@ Just add the desired package to `packages.txt`. Once your changes are pushed to 
 ```
 pip install --extra-index=https://pkgs.dev.azure.com/masdeseiscaracteres/python_packages/_packaging/artifacts/pypi/simple/ <package_name>
 ```
-
-
+Click [here](https://dev.azure.com/masdeseiscaracteres/python_packages/_packaging?_a=feed&feed=artifacts) to see an up-to-date list of available packages.
