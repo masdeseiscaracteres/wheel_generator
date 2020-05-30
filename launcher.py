@@ -1,13 +1,14 @@
 import sys
-from pip._internal import main as pip_main
+from subprocess import check_call, CalledProcessError
 
-def wheel(package):
-    pip_main(['wheel', '--no-deps', package])
-
+def build_wheel(package):
+    try:
+        check_call(["python", '-m', 'pip', 'wheel', '--no-deps', package])
+    except CalledProcessError as e:
+        print(e)
+        
 if __name__ == '__main__':
     with open(sys.argv[1]) as f:
         for line in f:
-            try:
-                wheel(line)
-            except Exception as e:
-                print(e)
+            build_wheel(line)
+            
