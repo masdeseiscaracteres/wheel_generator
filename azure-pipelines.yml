@@ -40,5 +40,5 @@ steps:
 - script: |
     pip install twine
     cat $(PYPIRC_PATH)
-    twine upload -r artifacts  --config-file $(PYPIRC_PATH) *.whl
+    twine upload -r artifacts --skip-existing --config-file $(PYPIRC_PATH) *.whl
   displayName: 'Upload artifacts'
