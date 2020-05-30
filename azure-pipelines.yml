@@ -40,5 +40,5 @@ steps:
 - script: |
     pip install twine
     cat $(PYPIRC_PATH)
-    twine upload -r masdeseiscaracteres --config-file $(PYPIRC_PATH) spyros-*
+    twine upload -r masdeseiscaracteres --config-file $(PYPIRC_PATH) *.whl
   displayName: 'Upload artifacts'
