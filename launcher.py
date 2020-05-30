@@ -2,7 +2,7 @@ import sys
 from pip._internal import main as pip_main
 
 def wheel(package):
-    pip_main(['wheel', package])
+    pip_main(['wheel', '--no-deps', package])
 
 if __name__ == '__main__':
     with open(sys.argv[1]) as f:
