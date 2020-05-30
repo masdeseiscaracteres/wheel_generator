@@ -1,2 +1,2 @@
-python-Levenshtein
-unqlite
+python-Levenshtein==0.12.0
+unqlite==0.8.1
