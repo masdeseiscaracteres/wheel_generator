@@ -20,8 +20,8 @@ strategy:
 steps:
 - task: Bash@3
   inputs:
-    targetType: 'inline'
-    script: echo $PATH && ls -R /c/Miniconda
+    targetType: 'filePath'
+    filePath: bash_task.sh
     
 - task: UsePythonVersion@0
   inputs:
