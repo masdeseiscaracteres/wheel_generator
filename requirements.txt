@@ -1,3 +1,0 @@
-setuptools # whichever version the Platform has
-wheel==0.34.2
-Cython==0.28
