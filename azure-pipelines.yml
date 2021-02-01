@@ -18,20 +18,23 @@ strategy:
       python.version: '3.8'
 
 steps:
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: echo $CONDA && ls
+    
 - task: UsePythonVersion@0
   inputs:
     versionSpec: '$(python.version)'
   displayName: 'Use Python $(python.version)'
 
 - script: |
-    conda activate base
-    which python
-    conda install -c conda-forge gmp
+    #conda activate base
+    #conda install -c conda-forge gmp
     python -m pip install --upgrade pip==20.2.4
     python -m pip install wheel==0.34.2
     python -m pip install setuptools # whichever version the above image has
     python -m pip install Cython==0.28
-    
   displayName: 'Install dependencies'
 
 - script: |
