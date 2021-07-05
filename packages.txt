@@ -4,3 +4,4 @@ pyfim==6.28
 implicit==0.4.2
 scikit-surprise==1.1.0
 rapidfuzz==0.12.5
+pyemd==0.5.1
